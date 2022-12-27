@@ -48,5 +48,23 @@ for _, server in pairs(servers) do
 		opts = vim.tbl_deep_extend("force", conf_opts, opts)
 	end
 
-	lspconfig[server].setup(opts)
+  lspconfig[server].setup(opts)
 end
+
+-- @TODO: this does not work from user.lsp.settings directory for some reason, redeclaring it here --
+
+lspconfig.sumneko_lua.setup {
+  settings = {
+     Lua = {
+			diagnostics = {
+				globals = { "vim" },
+			},
+			workspace = {
+				library = {
+					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+					[vim.fn.stdpath("config") .. "/lua"] = true,
+				},
+			},
+		},
+	},
+}

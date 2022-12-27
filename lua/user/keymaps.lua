@@ -61,6 +61,28 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
+-- DAP (debugging) --
+keymap('n', 'bp', [[:lua require"dap".toggle_breakpoint()<CR>]], { noremap = true })
+keymap('n', '<F5>', [[:lua require"osv".launch({port = 8086})<CR>]], { noremap = true })
+keymap('n', '<F9>', [[:lua require"dap".continue()<CR>]], { noremap = true })
+keymap('n', '<F10>', [[:lua require"dap".step_over()<CR>]], { noremap = true })
+keymap('n', '<F11>', [[:lua require"dap".step_into()<CR>]], { noremap = true })
+keymap('n', '<F12>', [[:lua require"dap.ui.widgets".hover()<CR>]], { noremap = true })
+
+-- Trouble (diagnostics) --
+keymap("n", "xx", "<cmd>TroubleToggle<cr>",
+  {silent = true, noremap = true})
+keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
+  {silent = true, noremap = true})
+keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",
+  {silent = true, noremap = true})
+keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",
+  {silent = true, noremap = true})
+keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
+  {silent = true, noremap = true})
+keymap("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
+  {silent = true, noremap = true})
+
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
