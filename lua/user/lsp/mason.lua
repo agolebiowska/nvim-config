@@ -63,7 +63,9 @@ lspconfig.sumneko_lua.setup {
 				library = {
 					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
 					[vim.fn.stdpath("config") .. "/lua"] = true,
+          "${3rd}/love2d/library",
 				},
+        checkThirdParty = false
 			},
 		},
 	},

@@ -1,6 +1,7 @@
 require "user.options"
 require "user.keymaps"
 require "user.plugins"
+--require "user.transparent" -- deactivating as catppuccin transparent bg works fine
 require "user.catppuccin"
 require "user.colorscheme"
 require "user.cmp"
@@ -20,6 +21,5 @@ require "user.indentline"
 require "user.alpha"
 require "user.whichkey"
 require "user.autocommands"
-require "user.transparent"
 require "user.dap"
 
