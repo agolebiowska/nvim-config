@@ -1,7 +1,7 @@
 return {
 	settings = {
 
-		lua = {
+		terraform = {
 			diagnostics = {
 				globals = { "vim" },
 			},

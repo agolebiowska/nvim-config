@@ -6,6 +6,8 @@ local servers = {
 	"pyright",
 	-- "bashls",
 	"jsonls",
+  "terraformls",
+  "tflint"
 	-- "yamlls",
 }
 
