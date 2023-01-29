@@ -4,14 +4,14 @@ if not status_ok then
 end
 
 catppuccin.setup({
-  flavour = "mocha",
+  flavour = "macchiato",
   transparent_background = true,
   highlight_overrides = {
-    mocha = function(mocha)
+    macchiato = function(macchiato)
         return {
-            NvimTreeNormal = { bg = mocha.none },
+            NvimTreeNormal = { bg = macchiato.none },
         }
     end,
   },
-  term_colors = false
+  term_colors = true
 })
