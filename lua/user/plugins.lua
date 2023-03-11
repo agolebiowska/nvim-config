@@ -111,6 +111,12 @@ use 'Mofiqul/dracula.nvim'
   -- LOVE2D docs --
   use { "davisdude/vim-love-docs" }
 
+  -- Markdown Preview --
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
