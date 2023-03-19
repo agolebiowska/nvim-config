@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 catppuccin.setup({
-  flavour = "macchiato",
+  flavour = "frappe",
   transparent_background = true,
   highlight_overrides = {
     macchiato = function(macchiato)
