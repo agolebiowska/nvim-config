@@ -19,4 +19,4 @@ transparent.setup {
   exclude = {}, -- table: groups you don't want to clear
 }
 
-vim.cmd[[hi NvimTreeNormal guibg=NONE ctermbg=NONE]]
+-- vim.cmd[[hi NvimTreeNormal guibg=NONE ctermbg=NONE]]

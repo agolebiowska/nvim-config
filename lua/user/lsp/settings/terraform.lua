@@ -1,6 +1,5 @@
 return {
 	settings = {
-
 		terraform = {
 			diagnostics = {
 				globals = { "vim" },

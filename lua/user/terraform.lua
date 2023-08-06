@@ -1,6 +1,6 @@
 local status_ok, terraform = pcall(require, "terraform")
 if not status_ok then
-  return
+return
 end
 
 vim.cmd([[let g:terraform_fmt_on_save=1]])

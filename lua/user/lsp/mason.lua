@@ -1,14 +1,15 @@
 local servers = {
-	"sumneko_lua",
-	-- "cssls",
-	-- "html",
-	-- "tsserver",
+	"lua_ls",
 	"pyright",
-	-- "bashls",
+	"bashls",
 	"jsonls",
-  "terraformls",
-  "tflint"
-	-- "yamlls",
+	"terraformls",
+	"tflint",
+	"yamlls",
+	"ansiblels",
+	"dockerls",
+	"gopls",
+	"marksman",
 }
 
 local settings = {
@@ -50,14 +51,12 @@ for _, server in pairs(servers) do
 		opts = vim.tbl_deep_extend("force", conf_opts, opts)
 	end
 
-  lspconfig[server].setup(opts)
+	lspconfig[server].setup(opts)
 end
 
--- @TODO: this does not work from user.lsp.settings directory for some reason, redeclaring it here --
-
-lspconfig.sumneko_lua.setup {
-  settings = {
-     Lua = {
+lspconfig.lua_ls.setup({
+	settings = {
+		Lua = {
 			diagnostics = {
 				globals = { "vim" },
 			},
@@ -65,10 +64,9 @@ lspconfig.sumneko_lua.setup {
 				library = {
 					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
 					[vim.fn.stdpath("config") .. "/lua"] = true,
-          "${3rd}/love2d/library",
 				},
-        checkThirdParty = false
+				checkThirdParty = false,
 			},
 		},
 	},
-}
+})
