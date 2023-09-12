@@ -60,6 +60,11 @@ return packer.startup(function(use)
 
 	-- Colorschemes
 	use({ "catppuccin/nvim", as = "catppuccin" })
+	use({
+		"jesseleite/nvim-noirbuddy",
+		requires = { "tjdevries/colorbuddy.nvim", branch = "dev" },
+	})
+	use({ "bluz71/vim-moonfly-colors", as = "moonfly" })
 
 	-- Cmp
 	use({ "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" }) -- The completion plugin
