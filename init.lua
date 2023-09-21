@@ -8,3 +8,5 @@ require("user.nvim-tree")
 require("user.bufferline") -- this one throws the unknown plugin error on startup
 require("user.lualine")
 require("user.indentline")
+require("user.mini")
+require("user.lsp")
